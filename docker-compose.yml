@@ -2,7 +2,14 @@ version: "3.8"
 
 services:
   app:
-    image: nervousfrog05/flask-devops-app
+    image: nervous05/flask-devops-app
     ports:
       - "5000:5000"
+
+  prometheus:
+    image: prom/prometheus
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
 

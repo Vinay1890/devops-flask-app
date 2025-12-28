@@ -8,7 +8,7 @@ REQUEST_COUNT = Counter('request_count', 'Total requests')
 @app.route("/")
 def home():
     REQUEST_COUNT.inc()
-    return "Hello from DevOps Project 🚀 , This is my project for complete CI/CD"
+    return "Hello from DevOps Project 🚀 , This is my project for complete CI part."
 
 @app.route("/health")
 def health():
